@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="library-container">
+        <h1>Library</h1>
+        <!-- the dialog for adding a new book -->
+         <dialog id="dialog">
+            <form method="dialog">
+                <label>Author Name:
+                    <input type="text" value="" required />
+                </label>
+                <label>Title:
+                    <input type="text" value="" required>
+                </label>
+                <label>Nr of pages:
+                    <input type="text" value="" required>
+                </label>
+                <label>Read Status
+                    <select>
+                        <option value="Not read yet">Not Read Yet</option>
+                        <option>Read</option>
+                    </select>
+                </label>
+                <div>
+                    <input type="submit" id="add" value="Add Book">
+                    <input type="submit" id="close" value="close" />
+                </div>
+            </form>
+         </dialog>
+        <button id="newBook">Add Book</button>
+    </div>
+    <div class="books-container">
+        <div class="book">
+            <h1 class="bookNumber">Book Number 1</h1>
+            <div>
+                <h1>Author: </h1>
+                <h1>Name</h1>
+            </div>
+            <div>
+                <h1>Title:</h1>
+                <h1>Name</h1>
+            </div>
+            <div>
+                <h1>Number of pages: </h1>
+                <h1>Number</h1>
+            </div>
+            <div>
+                <h1>Read Status: </h1>
+                <h1>Not read</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

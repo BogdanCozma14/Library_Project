@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    max-height: 100vh;
+}
+.library-container {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 4px solid black;
+    box-shadow: 8px 4px 4px red;
+    padding: 4rem;
+}
+.library-container h1 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+#newBook {
+    margin-bottom: 1rem;
+    width: 6rem;
+    height: 2rem;
+    background-color:aquamarine;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    border-radius: 6px;
+}
+#newBook:hover {
+    transform: scale(110%);
+    transition: .2s;
+    border: aquamarine;     
+}
+.book {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+}
+.books-container .bookNumber {
+    margin-bottom: 3rem;
+    font-size: 3rem;
+    color: red;
+}
+.book > div {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+.books-container div h1 {
+    color: aquamarine;
+}
+/* the dialog */
+dialog[open] {
+    opacity: 1;
+    transform: scaleY(1);
+    display: flex;
+    flex-direction: column;
+}
+dialog {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 30%;
+    padding: 2rem 0;
+    opacity: 0;
+    transform: scaleY(0);
+    transition:
+        opacity 0.7s ease-out,
+        transform 0.7s ease-out,
+        overlay 0.7s ease-out allow-discrete,
+        display 0.7s ease-out allow-discrete;
+    border: 2px solid #000;
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 0%);
+    transition: all 0.7s allow-discrete;   
+}
+dialog[open]::backdrop {
+    background-color: rgb(0 0 0 / 25%);
+}
+dialog label {
+    display: block;
+    margin-bottom: 1rem;
+}
+dialog label input,
+dialog label select {
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+dialog div {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+dialog input[type="submit"] {
+    padding: 0.5rem 1rem;
+    margin-left: 2rem;
+    background-color: aquamarine;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+dialog input[type="submit"]:hover {
+    transform: scale(105%);
+    transition: .2s;
+    border:aquamarine;
+}
+/* style for the button that delets a book */
+.deleteBook {
+    margin-bottom: 2rem;
+    color: #fff;
+    background-color: red;
+    border-radius: 6px;
+    width: 7rem;
+    height: 2rem;
+    border: none;
+    font-size: 1rem;
+    transition: .3s;
+    cursor: pointer;
+    font-weight: bold;
+}
+.deleteBook:hover {
+    transform: scale(1.1);
+    transition: .2s;
+}
+.toggleReadStatus {
+    margin-bottom: 1rem;
+    color: #fff;
+    background-color: green;
+    border-radius: 6px;
+    width: 9rem;
+    height: 3rem;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 2px;
+}
