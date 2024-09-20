@@ -111,12 +111,11 @@ function addBookToLibrary(container) {
         // event listener for the toggle read status button
         toggleReadBtn.addEventListener("click", () => {
             // Capture the current book instance
-            const bookInstance = myLibrary[i];
+            const bookInstance = myLibrary[i-1];
         
             // Ensure the book instance is valid before calling the method
             if (bookInstance) {
                 bookInstance.toggleReadStatus();
-                
                 // Update the displayed read status
                 readStatus.innerText = bookInstance.readStatus;
             }
